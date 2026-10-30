@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Playground — OntoDB demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=TikTok+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site">
+  <a class="logo" href="index.html"><span class="logo-mark">O</span><span>OntoDB</span></a>
+  <nav class="site" aria-label="Demos">
+    <a href="playground.html" aria-current="page">Playground</a>
+    <a href="range-scan.html">B+ tree</a>
+    <a href="hierarchy.html">Hierarchy</a>
+    <a href="showcase/">Showcase</a>
+    <a href="https://lamng3.com/" class="pill">Lam Nguyen ↗</a>
+  </nav>
+</header>
+<main class="wrap demo-page" id="content">
+<p class="kicker">Try it</p>
+<h1>Playground</h1>
+<p class="lede">Run OntoDB itself in your browser. The engine is the same C++ code as the native shell, compiled to WebAssembly, so SPARQL, query plans, the B+ tree indexes and the semantic-search commands behave as they do on your machine.</p>
+
+<div role="group" id="playground" aria-label="OntoDB playground">Loading the playground…</div><script src="playground.js"></script>
+
+</main>
+<footer class="site">OntoDB demo by <a href="https://lamng3.com/">Lam Nguyen</a>.</footer>
+</body>
+</html>

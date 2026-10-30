@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=TikTok+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<title>OntoDB demo</title>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site">
+  <a class="logo" href="index.html"><span class="logo-mark">O</span><span>OntoDB</span></a>
+  <nav class="site" aria-label="Demos">
+    <a href="playground.html">Playground</a>
+    <a href="range-scan.html">B+ tree</a>
+    <a href="hierarchy.html">Hierarchy</a>
+    <a href="showcase/">Showcase</a>
+    <a href="https://lamng3.com/" class="pill">Lam Nguyen ↗</a>
+  </nav>
+</header>
+<main class="wrap" id="content" style="max-width:1280px">
+<section class="hero">
+  <div>
+    <h1>A database management system for ontologies</h1>
+    <p class="lede">OntoDB is a database management system for ontologies. Data is RDF, the query language is SPARQL, and a database can live in a directory with a write-ahead log and snapshots.</p>
+    <div class="actions">
+      <a class="btn solid" href="playground.html">Playground</a>
+      <a class="btn" href="range-scan.html">B+ tree</a>
+      <a class="btn" href="hierarchy.html">Hierarchy</a>
+      <a class="btn" href="showcase/">Showcase</a>
+    </div>
+  </div>
+  <div class="demo-card" id="demo">
+    <div class="head"><h3>Query a real database</h3><span class="tag">output of the <b>ontodb shell</b></span></div>
+    <p class="try">Try it: Pick a query, press Run for its rows, then Explain analyze for the plan the optimizer chose.</p>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <p class="q" id="question"></p>
+    <pre class="sparql" id="sparql"></pre>
+    <div class="actions"><button type="button" class="btn solid" id="run">Run</button><button type="button" class="btn" id="explain">Explain analyze</button></div>
+    <div class="out" id="out" aria-live="polite">Press Run.</div>
+    <p class="note">Each query ran in the real shell on the Pizza ontology (loaded 27 triples). The page shows what the shell printed, with IRI prefixes shortened. <code>\explain analyze</code> prints each plan node with its estimated and actual rows.</p>
+  </div>
+</section>
+<script src="pg.js"></script>
+<script src="demo.js"></script>
+</main>
+<footer class="site">OntoDB demo by <a href="https://lamng3.com/">Lam Nguyen</a>.</footer>
+</body>
+</html>
